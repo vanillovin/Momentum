@@ -4,7 +4,7 @@ const weatherText = document.querySelector('.weather-text');
 function onGeoOk(position) {
   const lat = position.coords.latitude; // 위도
   const lon = position.coords.longitude; // 경도
-  const url = `https`://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
