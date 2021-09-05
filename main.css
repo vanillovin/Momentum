@@ -1,0 +1,187 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.js-weather {
+  user-select: none;
+  font-size: 12px;
+  position: absolute;
+  color: white;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.body-container {
+  height: 100%;
+  color: #34495e;
+  background-color: rgba(237, 241, 242, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-container .mmt-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(237, 241, 242, 0.5);
+  position: relative;
+}
+
+.body-container .mmt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(237, 241, 242, 0.5);
+  width: 40%;
+}
+
+.weather {
+  font-size: 12px;
+  position: absolute;
+  color: white;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.js-title {
+  font-size: 4rem;
+  margin: 40px 0 20px 0;
+  word-spacing: 10px;
+  user-select: none;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.form input,
+.js-toDoForm input {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 10px 10px 0 10px;
+  border-bottom: 1px solid rgba(52, 73, 94, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+  width: 250px;
+}
+
+.form input:focus,
+.js-toDoForm input:focus {
+  outline: none;
+}
+
+.js-toDoForm input {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.greetings {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.js-toDoList {
+  list-style: none;
+  padding-inline-start: 0px;
+  justify-self: flex-start;
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.js-toDoList li {
+  user-select: none;
+  margin: 0 0 6px 0;
+}
+
+.js-toDoList li button {
+  margin: 0 6px 6px 0;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(237, 241, 242, 0);
+  color: #222f3d;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.js-toDoList li button:hover {
+  color: rgb(255, 255, 255);
+}
+
+@keyframes fadeln {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeln 0.5s linear;
+}
+
+@media screen and (max-width: 780px) {
+  .body-container .mmt-container {
+    width: 60%;
+  }
+
+  .js-title {
+    margin-bottom: 12px;
+    font-size: 46px;
+  }
+
+  .form input,
+  .js-toDoForm input {
+    padding: 0;
+    width: 140px;
+    font-size: 14px;
+  }
+
+  .greetings {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .js-toDoList {
+    font-size: 16px;
+  }
+
+  .js-toDoList li {
+    margin-left: 40px;
+  }
+
+  .js-toDoList li button {
+    margin: 0 4px 4px 0;
+    border: none;
+    font-size: 12px;
+    padding: 0;
+  }
+}
